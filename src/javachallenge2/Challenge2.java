@@ -32,9 +32,11 @@ public void paint(Graphics g){
 
         if(tokyo > 30 || sydney > 32 || londen > 22 || newyork > 17){
             g.drawString("Onjuiste invoer", 350, 130);
-            repaint();
+
         }
         else{
+
+
             if(tokyo <0){
                 tokyo = tokyo + 24;
             }
@@ -61,11 +63,16 @@ public void paint(Graphics g){
             if(newyork >24){
                 newyork = newyork -24;
             }
+
+
+            g.drawString("sydney: "+sydney  + ":00", 350, 50 );
+            g.drawString("Tokyo: "+tokyo + ":00", 350, 70 );
+            g.drawString("Londen: "+londen + ":00", 350, 90 );
+            g.drawString("New york: "+newyork + ":00", 350, 110);
+            
         }
-    g.drawString("sydney: "+sydney  + ":00", 350, 50 );
-    g.drawString("Tokyo: "+tokyo + ":00", 350, 70 );
-    g.drawString("Londen: "+londen + ":00", 350, 90 );
-    g.drawString("New york: "+newyork + ":00", 350, 110);
+
+
 }
     private class Listener implements ActionListener{
         public void actionPerformed( ActionEvent e){
